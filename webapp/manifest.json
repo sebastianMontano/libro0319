@@ -1,0 +1,188 @@
+{
+  "_version": "1.73.1",
+  "sap.app": {
+    "id": "libro0319.libro0319",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.19.0",
+      "toolsId": "9d1da78e-e015-4e8e-8b95-f4727932daed"
+    },
+    "dataSources": {
+      "hv_company_code": {
+        "uri": "/sap/opu/odata4/sap/zsvbd_hv_company_code/srvd_a2x/sap/zsvdef_hv_company_code/0001/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      },
+      "hv_gl_account": {
+        "uri": "/sap/opu/odata4/sap/zsvbd_hv_gl_account/srvd_a2x/sap/zsvdef_hv_gl_account/0001/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      },
+      "res_lib0319": {
+        "uri": "/sap/opu/odata4/sap/zsvbd_res_lib0319/srvd_a2x/sap/zsvdef_res_lib0319/0001/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      },
+      "get_company_code_info": {
+        "uri": "/sap/opu/odata4/sap/zsvbd_get_company_code_info/srvd_a2x/sap/zsvdef_get_company_code_info/0001/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "libro0319-display": {
+          "semanticObject": "libro0319",
+          "action": "display",
+          "title": "{{libro0319-display.flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.136.8",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "libro0319.libro0319.i18n.i18n"
+        }
+      },
+      "hv_company_code": {
+        "dataSource": "hv_company_code",
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "hv_gl_account": {
+        "dataSource": "hv_gl_account",
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "res_lib0319": {
+        "dataSource": "res_lib0319",
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "get_company_code_info": {
+        "dataSource": "get_company_code_info",
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "libro0319.libro0319.view",
+        "async": true,
+        "viewPath": "libro0319.libro0319.view"
+      },
+      "routes": [
+        {
+          "name": "RouteSelection",
+          "pattern": ":?query:",
+          "target": [
+            "TargetSelection"
+          ]
+        },
+        {
+          "name": "RouteLibro",
+          "pattern": "libro/{companyCode}/{fiscalYear}/{fiscalPeriod}/{oportunidadEEFF}/generarPle:?query:",
+          "target": [
+            "TargetLibro"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetSelection": {
+          "id": "selection",
+          "name": "Selection"
+        },
+        "TargetLibro": {
+          "id": "libro",
+          "name": "Libro"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "libro0319.libro0319.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "libro0319libro0319"
+  }
+}

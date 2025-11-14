@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <SelectDialog
+        id="valueHelpDialogGLAccountLow"
+        title="Seleccionar Cuenta de Mayor (Desde)"
+        items="{ path: 'hv_gl_account>/ZCDS_HV_GL_ACCOUNT', parameters: { $select: 'GLAccount,GLAccountLongName' } }"
+        search=".onValueHelpSearch"
+        confirm=".onValueHelpClose"
+        cancel=".onValueHelpClose"
+    >
+        <customData>
+            <core:CustomData
+                key="filterProperty"
+                value="GLAccount"
+            />
+        </customData>
+        <StandardListItem
+            id="_IDGenStandardListItem2"
+            title="{hv_gl_account>GLAccount}"
+            description="{hv_gl_account>GLAccountLongName}"
+        />
+    </SelectDialog>
+</core:FragmentDefinition>

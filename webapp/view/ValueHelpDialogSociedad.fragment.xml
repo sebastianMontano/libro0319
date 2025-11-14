@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <SelectDialog
+        id="valueHelpDialogSociedad"
+        title="Seleccionar Sociedad"
+        items="{ path: 'hv_company_code>/ZCDS_HV_COMPANY_CODE', parameters: { $select: 'CompanyCode,CompanyCodeName' } }"
+        search=".onValueHelpSearch"
+        confirm=".onValueHelpClose"
+        cancel=".onValueHelpClose"
+    >
+        <customData>
+            <core:CustomData
+                key="filterProperty"
+                value="CompanyCodeName"
+            />
+        </customData>
+        <StandardListItem
+            id="_IDGenStandardListItem1"
+            title="{hv_company_code>CompanyCode}"
+            description="{hv_company_code>CompanyCodeName}"
+        />
+    </SelectDialog>
+</core:FragmentDefinition>

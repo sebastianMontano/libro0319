@@ -1,0 +1,24 @@
+{
+  "generationParameters": {
+    "generationDate": "Thu Oct 02 2025 15:59:07 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://my405954.s4hana.cloud.sap/sap/opu/odata4/sap/zsvbd_res_lib0319/srvd_a2x/sap/zsvdef_res_lib0319/0001/",
+    "appName": "libro0319",
+    "appTitle": "Libro 3.19",
+    "appDescription": "Libro 3.19",
+    "appNamespace": "libro0319",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.136.8",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.19.0",
+    "template": "Basic V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
