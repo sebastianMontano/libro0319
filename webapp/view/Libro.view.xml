@@ -22,7 +22,7 @@
             <!-- Título -->
             <Text
                 id="_IDGenText2"
-                text="REGISTRO DE ACTIVOS FIJOS - DETALLE DE LOS ACTIVOS FIJOS REVALUADOS Y NO REVALUADOS"
+                text="LIBRO DE INVENTARIOS Y BALANCES - ESTADO DE CAMBIOS EN EL PATRIMONIO NETO"
                 class="sapUiTinyMarginBottom"
             />
             <!-- Toolbar de acciones -->
