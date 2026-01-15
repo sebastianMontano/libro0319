@@ -109,10 +109,12 @@
                     <Label
                         id="_IDGenLabel4"
                         text="{i18n>lbl.activarMonedaUSD}"
+                        visible="false"
                     />
                     <CheckBox
                         id="activarMonedaUSD"
                         text="Sí"
+                        visible="false"
                     />
                     <Label
                         id="_IDGenLabel8"

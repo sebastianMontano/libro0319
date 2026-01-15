@@ -5,7 +5,7 @@
     {
       "source": "^/sap/(.*)$",
       "target": "/sap/$1",
-      "destination": "0M742J4_SAML_ASSERTION",
+      "destination": "0M7L9BB_SAML_ASSERTION",
       "authenticationType": "xsuaa",
       "csrfProtection": false
     },

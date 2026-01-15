@@ -133,7 +133,7 @@ sap.ui.define([
 
         const oCombinedFilter = aFilters.length ? new Filter({ filters: aFilters, and: true }) : undefined;
         const oBinding = oModel.bindList(sPath, undefined, undefined, oCombinedFilter);
-        const aContexts = await oBinding.requestContexts(0);
+        const aContexts = await oBinding.requestContexts(0, 10000);
         const aData = aContexts.map(ctx => ctx.getObject());
 
         this.getView().setModel(new JSONModel(aData), "resultsModel");
